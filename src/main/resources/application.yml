@@ -1,0 +1,84 @@
+spring:
+
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+
+  #Encoding UTF-8
+ # http:
+      #    encoding:
+      #   charset: UTF-8
+      # enabled: true
+      #force: true
+
+  #database
+  datasource:
+    # java config 수동 설정 시
+    hikari:
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      jdbc-url: jdbc:log4jdbc:mariadb://221.143.47.94:3306/billdb
+      username: billdb
+      password: qlfelqling
+
+
+  # java config 자동 설정 시
+  #    driver-class-name: com.tmax.tibero.jdbc.TbDriver
+  #    url: jdbc:tibero:thin:@221.143.47.94:8629:tibero
+  #   username: gibis
+  #  password: gibising
+
+  ## Mutipart
+  servlet:
+    multipart:
+      # enable mutipart uploads
+      enabled: true
+      # 파일이 메모리에 기록되는 임계값
+      file-size-threshold: 2KB
+      # Max file size
+      max-file-size: 200MB
+      # Max Request Size
+      max-request-size: 215MB
+      # 업로드된 파일의 임시 저장 공간
+#      location: C:\FileTemp
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  # 필드 속성 네임을 언더 스코어 -> 카멜 케이스
+
+
+server:
+  servlet:
+    context-path: /
+    jsp:
+      init-parameters:
+        development: true #서버 재시작없이 바로 업데이트됨
+    session:
+      timeout: 10m
+  error:
+    whitelabel:
+      enabled: false
+  port: 1234
+
+#logging:
+#  level:
+#    jdbc.sqlonly: debug
+#    org.springframework.web: debug
+#    org.zaxxer.hikari.HikariDataSource: error
+#    org:
+#      hibernate:
+#        type:
+#          descriptor:
+#            sql: trace
+
+###################################################
+#          기타 설정
+###################################################
+file :
+  savedir : D:\springboot\upload\upload

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="ADMIN_COMMON">
+
+   
+<!-- =================================================== 
+                             File Download
+ =====================================================-->
+
+	<!-- 파일 다운로드-->
+	<select id="selFileDown" parameterType="java.util.HashMap" resultType="com.admin.upload.common.util.CaseInsensitiveMap">
+		SELECT *
+		FROM COM_FILETBL
+		WHERE FILE_NAME = #{filename}
+		   AND FILE_NO = #{no}
+
+	</select>
+
+
+	<!-- 파일 insert -->
+	<insert id="insFileUpload" parameterType="java.util.HashMap" useGeneratedKeys="true"  keyProperty="file_no" >
+		INSERT INTO  com_filetbl (
+			file_no
+			,file_seq
+			,file_kind
+			,file_name_org
+			,file_name
+			,file_ext
+			,file_size
+			,file_path
+			,apply_date
+			,apply_id
+		) VALUES (
+			<if test="file_no != null and file_no != '' ">
+				#{file_no}
+			</if>
+			<if test="file_no == null or file_no == '' ">
+				null
+			</if>
+
+			<if test="file_seq != null and file_seq != '' ">
+				, #{file_seq}
+			</if>
+			<if test="file_seq == null or file_seq == '' ">
+				, 1
+			</if>
+			, #{file_kind}
+			, #{file_name_org}
+			, #{file_name}
+			, #{file_ext}
+			, #{file_size}
+			, #{file_path}
+			, now()
+			, #{user_id}
+		)
+	</insert>
+
+</mapper>

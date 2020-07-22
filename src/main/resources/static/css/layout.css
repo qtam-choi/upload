@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+body, html {margin:0; height:100%}
+section { box-sizing:border-box; width:100%; min-width:1280px; margin:0; padding:50px 0 0 0; height:100%; display:inline-block;}
+#Wrap {width:100%; margin:0; padding:0; border:0; height:100%;}
+
+/**************************************Login**************************************/
+.Loginbg {background:url(../images/Login_bg5.jpg); background-color: #f5f5f5; background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; min-height: 530px !important;}
+.Loginbg > h1 {padding: 20px  50px;}
+.LoginWrap {width:260px; height: 400px; padding: 20px 30px; background-color: rgba(255, 255, 255, 0.9); text-align:left; color: #0d3f5d; position:absolute; top: 50%; left: 50%; margin-left: -160px; margin-top: -200px; border-radius: 3px; box-shadow: 2px 3px 20px rgba(0,0,0,0.20); border: 1px solid #67B1D6; overflow: hidden;}
+.LoginWrap > h2 {font-size: 16px !important; font-weight: 700; text-align: center; color: #fff; background:#006699; margin: -20px -50px 15px; padding: 8px 0; letter-spacing: -1px;}
+.LoginWrap > h3 {font-size: 18px; font-weight: 700; text-align: center; color: #2c7eaf;}
+.LoginWrap > p a {color:#2c7eaf; font-weight: normal; font-size: 12px; text-decoration: underline;}
+.LoginWrap > p a:hover {color:#65ca0c;}
+.logininput {width:250px; height: 35px; line-height: 35px; padding-left: 5px; background:#fafafa !important; font-size: 12px; color:#222; border: 1px solid #cfcfcf; border-radius: 2px; }
+.logininput:hover {border:1px solid #40a1dc;}
+.logininput::placeholder { color:#dadada }
+.loginbtn {width:257px; height: 35px; line-height: 35px;  background:#3399CC; color:#fff; padding:0; border: 0; font-size:16px;}
+.logincheck {width:210px; text-align: left; cursor: pointer; font-size: 13px;}
+.logincopy {width:320px; height:50px; padding:0; text-align:center; color: #fff; position:absolute; float: left; bottom:10px; left: 50%; margin-left: -160px; font-size: 11px; font-weight: normal;}
+
+.Loginbg UL {display:table; width:100%}
+.Loginbg UL > li:first-child {display:table-cell; width:50%; text-align:left; padding: 20px  50px;}
+.Loginbg UL > li:last-child {display:table-cell; width:50%; text-align:right;padding: 20px  50px;}
+
+.LoginWrap .mid-line {height:5px; border-bottom:2px solid #3399CC; margin-bottom:13px; width:257px;}
+.LoginWrap .tel-num{width:90px; float:left; text-align:center; font-size:12px; background-color:#999; margin-left:3px; cursor:pointer;}
+.LoginWrap IMG.capcha {width:255px; height:40px; border:1px solid #aaa}
+
+
+
+
+@media only screen and (max-height:530px) {
+	.logincopy {display: none;}
+}
+
+/**************************************상단  공통 **************************************/
+header { position:absolute; left:0; top:0; width:100%; height:49px; background:#fff;min-width:1280px; border-bottom:1px solid #dddddd;}
+header > h1 { display:block; float:left; width:258px; height:50px; }
+header > h1 a img { margin-left:15px; margin-top:5px;}
+.header_menu {display:block; float:right; padding:0; vertical-align: middle; height:50px; }
+.header_menu p { display: inline-block; line-height: 50px; vertical-align: middle;height:50px; font-size:12px; color:#444; margin-right: 15px;}
+.header_menu p > img {vertical-align:middle}
+.header_menu p > strong {font-weight:normal; color:#139638}
+.header_menu button { display: inline-block; vertical-align: middle; margin:0; width:50px; height:50px; border-left:1px solid #dddddd; background:none; }
+
+/**************************************서브컨텐츠 공통 **************************************/
+.ContentWrap { box-sizing:border-box; height:100%; min-height: 650px; background:#f1f1f1; margin-left:220px; position:relative; z-index:5; overflow: auto;}
+.ContentWrap > h2 {display:block; width: 95%; margin: 0 auto; padding: 20px 0 20px 45px; font-size: 20px; color:#233342; font-weight:600; background: url(../images/bullet01.png) 25px 27px  no-repeat;}
+.nav { display:block; text-align:right; color:#233342; font-weight:400; line-height:40px; height: 40px; font-size:12px; position: absolute; right: 2.4%; top:25px}
+.nav > span {padding:0 7px}
+.nav > span strong {color:#233342; font-weight:500;}
+.contents {min-width:940px; width:95%; margin:0 auto; padding-bottom: 50px;  background:#fff; text-align:center; position:relative; border: 1px solid #8DB3D9;}
+.contents .sampleimg { width:100%; max-width:1010px}
+.contents h3 {display: block; position: relative;color:#35404f; font-size:16px; font-weight:600; background:url(../images/bullet02.png) 5px 8px no-repeat; text-indent: 15px; text-align: left; width:95%;  min-width: 870px;  margin: 0 auto 20px;}
+footer {margin:20px 0; text-align: center; color:#9db3c0; font-size: 11px;}
+
+/*메인*/
+.Mcontents {width:970px;  margin:0 auto;  text-align:center; position:relative;}
+.Maintt { text-align: center; padding: 40px 0 ; font-size: 22px; color:#233342; font-weight:600; line-height: 30px;}
+.Maintt div {font-size:20px; font-weight:normal;}
+.Maintt div button {vertical-align: middle; margin-top: -2px;}
+.box1 {width: 310px; height: 210px; margin-right: 20px; box-sizing: border-box; border: 1px solid #dee1e7; background: #fff; float:left; }
+.box1:nth-child(3) {margin-right:0;}
+.box1:nth-child(4) {height:250px !important;}
+.box1 > h2 { text-align:left; height: 50px; line-height: 50px; border-bottom:1px solid #dee1e7; color:#35404f; font-size: 16px; font-weight: 600; }
+.box1 > h2 img {vertical-align: middle; margin-top: -2px;}
+.box1 > ul { text-align:center; padding:0; margin:25px 0 5px;}
+.box1 > ul li { display: inline-block; *zoom:1; *display: inline; width: 110px; height: 90px; background: #f5f8fb; box-sizing: border-box; border: 1px solid #e9ecf1; overflow: hidden; border-radius: 3px;}
+.box1 > ul li:first-child {margin-right: 10px; color:#2d9663}
+.box1 > ul li:first-child h3 { background:#52bf8a;}
+.box1 > ul li:last-child {color:#465679;}
+.box1 > ul li:last-child h3 {background:#638ca6;}
+.box1 > ul li > h3 { color:#fff; font-size: 13px; text-align: center; height: 25px; line-height: 25px; display: block;}
+.box1 > ul li > p { display: block; height: 65px; line-height: 57px; font-size: 15px;}
+.box1 > ul li > p strong {font-size: 45px;}
+.box1 .comment {font-size:11px; color:#7f8fa4; text-align: left; margin-left: 35px;}
+.box1 > table {width:235px; font-weight: normal; margin:28px auto 0 ; border-collapse: collapse; }
+.box1 > table th { background: #52bf8a; color:#fff; padding: 3px 0;  font-weight: normal; font-size:12px; border-right:2px solid #fff; border-bottom:2px solid #fff;}
+.box1 > table td { background: #f1f1f1; color: #425972; text-align: right; padding: 3px 15px 3px 0; font-size:11px; border-bottom:2px solid #fff; }
+.box1 > table td strong {font-size: 12px}
+.box2 {width: 640px; height: 250px; box-sizing: border-box; border: 1px solid #dee1e7; background: #fff;  float:left; position:relative}
+.box2  > button {position:absolute; right: 15px; top: 15px; display: block; width: 50px; height: 20px}
+.box2 table {width:100%; margin: 0 auto;border-collapse: collapse; font-size: 13px;}
+.box2 table tr td {color:#66728c; padding:0 5px;border: 0; font-weight:normal; }
+.box2 table tr td a {color:#66728c;}
+.box2 table tr td a:hover {color:#52bf8a;}
+.box2 table tr td a p {height:37px; line-height:37px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; width:400px; text-align:left;}
+.box2 table tbody tr:nth-child(even) { background:#f5f8fb}
+.tabs { margin: 0; padding: 0; list-style: none; height: 50px; border-bottom: 1px solid #bbb; background:#f1f1f1}
+.tabs li { float: left; text-align:center; cursor: pointer; width:155px; height:50px; line-height: 50px; border-right: 1px solid #bbb; border-left: none; font-weight: normal; background: #DEDEDE; overflow: hidden; position: relative; font-size:14px; color:#999;}
+.tabs li.active { background: #FFF; border-bottom: 1px solid #FFF; color:#333; font-weight:bold}
+.tab_container { background: #FFF; font-size: 12px;}
+.tab_content { padding: 5px; font-size: 12px; display: none; }
+
+/*회원정보관리 검색폼*/
+.SearchWrap {width:100%; background: #f9f9f9; padding:23px 0; border-bottom: 1px solid #dee1e7; text-align: right}
+.SearchWrap > form {width:90%; margin: 0 auto; min-width: 870px;}
+.SearchWrap > form label {color:#7f8fa4; font-size:14px; }
+.searchbtn { height: 34px; line-height:34px; color:#fff; background: #3699d3; margin: 0; padding: 0 20px;}
+.downbtn { height: 34px; line-height:34px; color:#fff; background: #5faf56; margin: 0; position: absolute; right: 0; top: 0; text-align: center !important; display: block; padding: 0 20px !important; text-indent: 0}
+.upbtn {height: 34px; line-height:34px; color:#fff; background: #ec7f00; margin: 0; position: absolute; right: 90px; top: 0; text-align: center !important; display: block;padding: 0 20px  !important;overflow:visible; text-indent: 0 }
+.morebtn {height: 34px; line-height:34px; color:#fff; background: #ec7f00; margin: 0; position: absolute; right: 120px; top: 0; text-align: center !important; display: block; padding: 0 20px; margin: 0;text-indent: 0}
+/*page*/
+.paging {width:100%; margin:10px auto; text-align:center;}
+.paging a { display:inline-block; *zoom:1; *display:inline; width:28px; height:28px; line-height:28px; color:#666; font-size:13px; font-weight:normal; vertical-align:middle; text-align:center; cursor:pointer;}
+.paging .active { color:#6ea5ca; font-weight:800;}
+.paging img { vertical-align:middle;}
+
+/*table*/
+
+.BasicTbl {width:90%; min-width: 870px; margin: 0 auto; border-left:1px solid #a0b4c2; border-right:1px solid #a0b4c2; border-bottom:1px solid #a0b4c2; border-collapse: collapse; font-size: 13px;}
+.BasicTbl tr:hover {cursor: pointer; background:#e3eef9 !important; }
+.BasicTbl th {background:#a0b4c2/*#a0b4c2;*/; color:#fff; padding:15px 5px; border: 0;font-weight:normal; }
+.BasicTbl td {color:#66728c; padding:8px 5px;border: 0; font-weight:normal; }
+.BasicTbl td a {color:#66728c;width: 100%; height: 100%; display: block;}
+.BasicTbl td a:hover {color:#282e35 !important;}
+.BasicTbl tbody tr:nth-child(even) { background:#f5f8fb}
+.BasicTbl tfoot tr {background: #d9e9f6}
+.BasicTbl tfoot tr:hover {background: #d9e9f6 !important}
+.BasicTbl tfoot tr td { font-weight: 600;}
+.br {border-right:1px solid #cedbe4 !important;}
+.bt {border-top:1px solid #cedbe4 !important;}
+.bb {border-bottom:1px solid #cedbe4 !important;}
+.bl {border-left:1px solid #cedbe4 !important;}
+.hn tr:hover {background:none !important;}
+.hn tr:nth-child(even) { background:#fff !important;}
+.BasicTbl2 {width:95%; min-width: 870px; margin: 0 auto; border:1px solid #BDCDDA; border-collapse: collapse; font-size: 13px;}
+.BasicTbl2 th {background:#eef4fa;color:#333; padding:7px; border: 0;font-weight:normal; text-align: center; border-bottom:1px solid #d4dfe7; }
+.BasicTbl2 td {color:#66728c; padding:7px 0 7px 15px;border: 0; font-weight:normal; text-align:left; border-bottom:1px solid #d4dfe7; background:#FFFFFF; line-height:28px }
+.BasicTbl2 td .comment {font-size:11px; color:#7f8fa4; text-align: left;}
+.BasicTbl2 td > img {border: 1px solid #ddd; margin: 15px 0}
+
+.BasicTbl3 {width:100%; min-width: 700px; margin: 0 auto; border:1px solid #d4dfe7; border-collapse: collapse; font-size: 13px;}
+.BasicTbl3 th {background:#a0b4c2;color:#fff; padding:7px; border: 0;font-weight:normal; text-align: center; border-bottom:1px solid #d4dfe7; }
+.BasicTbl3 td {color:#66728c; padding:7px 0 7px 15px;border: 0; font-weight:normal; text-align:left; border-bottom:1px solid #d4dfe7; }
+.BasicTbl3 td .comment {font-size:11px; color:#7f8fa4; text-align: left;}
+.BasicTbl3 td > img {border: 1px solid #ddd; margin: 15px 0}
+
+.BasicTbl4 {width:95%; min-width: 700px; margin: 0 auto; border-collapse: collapse; font-size: 13px; border-top:2px solid # #0066CC}
+.BasicTbl4 th {background:#4997CB;color:#fff; padding:10px; border: 0;font-weight:bold; text-align: center; border:1px solid #BDCDDA; }
+.BasicTbl4 td {color:#66728c; padding:10px;border: 0; font-weight:normal; text-align:center; border:1px solid #BDCDDA; }
+.BasicTbl4 td .comment {font-size:11px; color:#7f8fa4; text-align: left;}
+.BasicTbl4 td > img {border: 1px solid #ddd; margin: 15px 0}
+.BasicTbl4 th.Tblth { background:#CEE5F1; color:#0099CC;}
+.BasicTbl4 td.Tblsub { background:#F2F7FC; color:#0099CC;}
+
+.Lstpyo {}
+
+.TblTxt { text-align:left; color:#666; font-size:12px; width:95%;margin: 0 auto; padding-bottom:10px;}
+
+.modifybtn {height: 26px; line-height:22px; color:#fff; background: #999; margin: 0; border-radius:2px; padding: 0 5px;  font-size:11px;}
+
+
+/* 대시보드 */
+#chart2 {width:90%; height:200px; margin-left:4%; margin-bottom:10px;}
+#chart3 {width:95%; height:300px; margin-left:4%; margin-bottom:20px;}
+
+UL.dashboard-topbox {display:table; width:100%}
+UL.dashboard-topbox > li:first-child {display:table-cell; width:40%; text-align:left; padding:0 20px}
+UL.dashboard-topbox > li:first-child .dashtxt {width:100%; padding:10px; text-align:center; font-size:11px; margin:0 auto}
+UL.dashboard-topbox > li:last-child {display:table-cell; width:60%; text-align:center;padding:0 20px;vertical-align:top}
+
+DIV.chart3txt{width:95%; padding:10px; text-align:right; font-size:11px; margin:0 auto}
+
+button.min-btn {width:130px; color:#333; font-weight:bold; margin-right:-7px; background:#dddddd url(../images/icon_time.png) 12px 18px no-repeat; padding-left:10px}
+button.logout-btn {width:130px; color:#FFF;background:#CC0000 url(../images/icon_key.png) 15px 15px no-repeat;  padding-left:10px}
+
+
+
+
+.BasicTbl2 td .comment {font-size:11px; color:#7f8fa4; text-align: left;}
+.modifybtn {height: 26px; line-height:22px; color:#fff; background: #999; margin: 0; border-radius:2px; padding: 0 5px;  font-size:11px;}
+
+.Tbl_top {border:2px solid #8DB3D9;}
+.Tbl_top TH{ background:#E0EBF6; height:24px;}
+
+
+/*20180212*/
+.breakfast {display:inline-block; *zoom:1; *display: inline; padding:2px 5px; background:#15a8b5; color:#fff; font-size:10px; border-radius: 3px;}
+.lunch {display:inline-block; *zoom:1; *display: inline; padding:2px 5px; background:#ed900a; color:#fff; font-size:10px; border-radius: 3px;}
+.dinner {display:inline-block; *zoom:1; *display: inline; padding:2px 5px; background:#3059a3; color:#fff; font-size:10px; border-radius: 3px;}
+
+
+SPAN.star{ font-size:16px; margin:0px 4px; font-weight:bold; color:#FF3300}
+TR.locked { background-color:#eee}
+TR.locked TD{ color:#bbb}
+
+
+.Tblink TR:hover{ background-color:#E6F8FF; cursor:pointer}
+
+h3.tb {display: block; position: relative;color:#35404f; font-size:16px; font-weight:600; background:url(../images/bullet02.png) 5px 8px no-repeat; text-indent: 15px; text-align: left; width:95%;  min-width: 870px;  margin: 0 auto 10px;}
