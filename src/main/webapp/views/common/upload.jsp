@@ -14,8 +14,8 @@
 
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/reset.css'/>">
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/list.css'/>">
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/common.css'/>">
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/style.css?v=0.1'/>">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/css/common.css?v=0.2'/>">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/css/style.css?v=0.2'/>">
 
     <script src="<c:url value='/js/jquery-1.12.4.min.js'/>"></script>
     <script src="<c:url value='/js/jquery-ui.js'/>"></script>
@@ -84,10 +84,10 @@
 
     <div id="wrap" class="wrap">
         <div class="skip_nav">
-            <a href="https://pass.thunderpost.net/#content" class="go_content">본문 바로가기</a>
+            <a href="#" class="go_content">본문 바로가기</a>
         </div>
         <header class="header">
-            <div class="logo"><a href="https://pass.thunderpost.net/#"><img src="<c:url value='/images/logo.png'/>" alt="KT 모바일통지 CI"></a></div>
+            <div class="logo"><a href="#"><img src="<c:url value='/images/logo.png'/>" alt="KT 모바일통지 CI"></a></div>
         </header>
 
         <div id="content" class="content full login_content">

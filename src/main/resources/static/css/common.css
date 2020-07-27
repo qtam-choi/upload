@@ -1,278 +1,138 @@
 @charset "utf-8";
-/* CSS Document */
 
-/* reset */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
-fieldset,img {border:0 none;}
-dl,ul,ol,menu,li {list-style:none;}
-blockquote, q {quotes: none;}
-blockquote:before, blockquote:after,q:before, q:after {content:'';content:none;}
-input,select,textarea,button {vertical-align:middle;}
-button {border:0 none;background-color:transparent;cursor:pointer;}
-button > img {vertical-align: middle !important; margin-top:-4px;}
-button:hover {opacity: .9}
-a {text-decoration:none; cursor: pointer}
-a:active, a:hover {text-decoration:none; }
-address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal;}
-*:focus { outline: none; }
-/*fclear*/
-.fclear:after { content:" "; height:0; display:block; visibility:hidden; clear:both; }
-* html .fclear { height:1%; }
-.fclear { display:block; min-height:1%;}
-.pointer { cursor: pointer !important}
-/*font*/
-* {font-family: "맑은 고딕","Malgun Gothic","Nanumun Gothic","돋움","Dotum","Arial","sans-serif" ;}
+.blind {position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden}
+.m_content {display: block}
+.pc_content {display: none}
+.txt_left {text-align: left !important}
+.txt_right {text-align: right !important}
+.txt_center {text-align: center !important}
+.fl {float: left !important}
+.fr {float: right !important}
+.fn {float: none !important}
+.clearfix:after {content: ''; display: block; clear: both}
+.skip_nav a {position: fixed; top: -40px; left: 0; width: 100%; height: 40px; background: #333; color: #fff; line-height: 40px; text-align: center; z-index: 999}
+.skip_nav a:focus {top: 0}
+.bold {font-weight: 500; color: #333}
+.fw400 {font-weight: 400}
+.fw500 {font-weight: 500}
+.color_red {color: #d71921 !important}
+.bg_navi {background-color: #2c4059 !important}
+.bg_red {background-color: #d71921 !important}
+.bg_yellow {background-color: #f7941d !important}
+.bg_gray {background-color: #666 !important}
 
-/*float*/
-.f-right {float:right}
-.f-left {float:left}
+/* form */
+input[type=text][readonly] {background: #f2f3f5;}
+select, input[type=text], input[type=password] {width: 100%; height: 30px; padding-left: 7px; font-size: 12px}
+select {background-image: url(../images/common/icon_select_m.gif); background-repeat: no-repeat; background-position: calc(100% - 7px) 50%; background-size: 10px}
+.checkbox, .radio {display: inline-block; vertical-align: middle}
+.checkbox label, .radio label {position: relative; padding-left: 22px}
+.checkbox label:before, .radio label:before {content: ''; position: absolute; top: 2px; left: 0; width: 17px; height: 17px; background-size: 100%}
+.checkbox + .checkbox, .radio + .radio {margin-left: 16px}
+.checkbox label:before {background-image: url(../images/checkbox.png)}
+.checkbox input[type=checkbox]:checked + label:before {background-image: url(../images/checkbox_on.png)}
 
-/* txt color*/
-.black {color:#222  !important;}
-.white {color:#fff  !important;}
+body {background: #f4f4f4}
 
-/*width height*/
-.W10 {width:10% !important;}
-.W20 {width:20% !important;}
-.W30 {width:30% !important;}
-.W40 {width:40% !important;}
-.W50 {width:50% !important;}
-.h100 {height:100% !important}
-/*text*/
-.textleft {text-align: left !important; }
-.textright {text-align:right !important;}
-.textcenter {text-align:center !important;}
-.textred {color:#d71e4a !important;}
-.textblue {color:#3699d3 !important;}
-.textgrey {color:#999 !important;}
+.header {padding: 40px 0 15px}
+.header .logo {width: 164px; margin: 0 auto}
 
-/*bg color*/
-.bgblack {background-color:#333 !important;}
-.bgDKgrey {background-color:#333 !important;}
-.bggrey {background-color:#a4a4a4 !important;}
-.bgwhite {background-color:#fff !important; border:1px solid #cccccc; color:#333 !important;}
-.bgblue {background-color:#3699d3 !important;}
-.bgbluesky {background-color:#006699 !important;}
-.bgorange {background-color:#f28e00 !important;}
-.bgred {background-color:#e23945 !important;}
+/* title */
+h2.tit {padding: 17px 0 19px; font-size: 23px; font-weight: 500; color: #333; text-align: center}
+h3.tit {position: relative; margin-bottom: 9px; padding-left: 18px; font-size: 16px; font-weight: 500; color: #333}
+h3.tit:before {content: ''; position: absolute; top: 6px; left: 0; width: 13px; height: 13px; background: url(../images/common/icon_tit_m.gif); background-size: 13px}
 
-.tblue { background-color:#069; color:#FFF; padding:3px; font-size:11px;}
-.tred { background-color:#F00; color:#FFF; padding:3px; font-size:11px;}
-.tgrey { background-color:#CCC; color:#333; padding:3px; font-size:11px;}
+/* button */
+.btn_wrap {position: relative; margin-top: 17px; text-align: center}
+.btn_normal {display: inline-block; height: 37px; padding: 0 20px; font-weight: 400; color: #fff; line-height: 37px; background-color: #999; box-sizing: border-box; text-align: center;}
+.btn_normal + .btn_normal {margin-left: 7px}
+.btn_s_normal {display: inline-block; height: 30px; padding: 0 12px; color: #fff; background: #999; line-height: 30px; text-align: center}
+.btn_next_step {padding-left: 20px; padding-right: 41px; text-align: left; background-color: #d71921; background-image: url(../images/common/icon_next_m.png); background-size: 14px; background-position: calc(100% - 14px) 50%; background-repeat: no-repeat}
+.btn_prev_step {padding-right: 20px; padding-left: 41px; text-align: right; background-color: #666; background-image: url(../images/common/icon_prev_m.png); background-size: 14px; background-position: 21px 50%; background-repeat: no-repeat}
+.btn_wrap.btn3 {width: 240px; margin-left: auto; margin-right: auto}
+.btn_wrap.btn3:after {content: ''; display: block; clear: both}
+.btn_wrap.btn3 .btn_cancel {float: right; margin-top: 10px}
 
-/*form style*/
-input:-ms-input-placeholder  { color: #b8b8b8; }
-input::-webkit-input-placeholder  { color: #b8b8b8; }
-input::-moz-placeholder  { color: #b8b8b8; }
-input, select, textarea {color:#666 !important; background: #fff !important; border: 1px solid #dee1e7;}
-input:disabled { background: #f2f2f2 !important}
-.input1 {width:168px; height: 34px; line-height: 34px; border: 1px solid #dee1e7; padding-left: 10px; }
-.input2 {width:150px; height:25px; line-height: 25px;  border: 1px solid #dee1e7; padding-left: 10px;}
-.input3 {width:250px; height:25px; line-height: 25px; border: 1px solid #dee1e7; padding-left: 10px;}
-.input4 {width:100px; height:25px; line-height: 25px; border: 1px solid #dee1e7; padding-left: 10px;}
-.input5 {width:100px; height: 34px; line-height: 34px; border: 1px solid #dee1e7; padding-left: 5px; }
-.input6 {width:90%; height: 34px; line-height: 34px; border: 1px solid #dee1e7; padding-left: 5px; }
-.input7 {width:120px; height: 34px; line-height: 34px; border: 1px solid #dee1e7; padding-left: 10px; }
-.input8 {width:180px; height:25px; line-height: 25px; border: 1px solid #dee1e7; padding-left: 10px;}
-.input9 {width:200px; height: 34px; line-height: 34px;  padding-left: 10px; }
-.select1 {width:168px; height: 36px; line-height: 34px; border: 1px solid #dee1e7; padding-left: 10px;}
-.select2 {width:100px; height: 25px; line-height: 25px; border: 1px solid #dee1e7; padding-left: 10px;}
-.select3 {width:150px; height: 25px; line-height: 25px; border: 1px solid #dee1e7; padding-left: 10px;}
-.select4 {width:80px; height: 36px; line-height: 34px; border: 1px solid #dee1e7; padding-left: 10px;}
-.check1 {width:12px; height: 12px; border-radius: none  !important; background: #fff  !important; border: 1px solid #ccc !important; vertical-align: middle; margin-top: -2px;}
-.check2 {width:14px; height: 14px; border-radius: none  !important; background: #fff  !important; border: 1px solid #ccc !important; vertical-align: middle; margin-top: -2px;}
-.radio1 {width:12px; height: 12px; margin-top: -2px; }
-.textarea1 {width:90%; height: 100px; margin: 10px 0;border: 1px solid #dee1e7; padding: 10px;}
-.file1 {width:240px; height:25px; line-height: 25px; border: 1px solid #dee1e7; }
-#datepicker1, #datepicker2, #monthpicker, #monthpicker1, #monthpicker2 { background-image: url(../images/bg_date.png) !important; background-position: 90% 50% !important; background-repeat: no-repeat !important; cursor: pointer}
+/* table */
+.normal_table {min-width: 100%; border-top: 2px solid #d71921; text-align: center; table-layout: auto}
+.normal_table colgroup {display: none}
+.normal_table th, .normal_table td {padding: 9px 18px; border-right: 1px solid #d9d9d9; border-bottom: 1px solid #d9d9d9; white-space: nowrap}
+.normal_table th {position: relative; font-weight: 500; color: #333; border-bottom: 1px solid #d9d9d9; background: #faf6f0}
+.normal_table th.dep2 {background: #f4f4f4}
+.normal_table th:last-child, .normal_table td:last-child {border-right: 0}
+.normal_table th:last-child.dep2 {border-right: 1px solid #d9d9d9}
+.normal_table td.tit {padding: 9px 0 9px 15px; font-weight: 500; color: #333; border-bottom: 1px solid #d9d9d9; background: #faf6f0; text-align: left}
+.normal_table tbody tr:last-child td {border-bottom-color: #333}
 
 
+/* paging */
+.paging {margin-top: 18px; font-size: 0; text-align: center}
+.paging a{display: inline-block; width: 25px; height: 25px; margin-right: 5px; font-size: 13px; color: #999; line-height: 24px; border: 1px solid #d9d9d9; vertical-align: top; box-sizing: border-box; background-size: 100%}
+.paging a:last-child {margin-right: 0}
+.paging .active {font-weight: 400; color: #fff; background: #d71921; border-color: #d71921; text-decoration: underline}
+.paging .btn_first {background-image: url(../images/common/paging01_m.gif)}
+.paging .btn_prev {margin-right: 13px; background-image: url(../images/common/paging02_m.gif)}
+.paging .btn_next {margin-left: 8px; background-image: url(../images/common/paging03_m.gif)}
+.paging .btn_last {background-image: url(../images/common/paging04_m.gif)}
 
-input[type="checkbox"] {
-    display:none;
+
+@media screen and (min-width: 1280px){
+
+	body {font-size: 15px}
+
+	/* header */
+	.header {position: relative; height: 165px; padding: 0}
+	.header .logo {position: absolute; top: 30px; left: 50%; width: auto; margin: 0 0 0 -640px}
+
+	/* title */
+	h2.tit {padding: 38px 0 28px; font-size: 36px; font-weight: 500}
+	h3.tit {margin-bottom: 17px; padding-left: 23px; font-size: 20px}
+	h3.tit:before {top: 8px; width: 16px; height: 16px; background: url(../images/common/icon_tit.gif); background-size: 16px}
+
+	/* form */
+	select, input[type="text"], input[type="password"] {height: 40px; padding-left: 14px; font-size: 14px}
+	select {background-image: url(../images/common/icon_select.gif); background-position: calc(100% - 14px) 50%; background-size: auto}
+	.checkbox label, .radio label {padding-left: 30px}
+	.checkbox label:before, .radio label:before {top: 2px; width: 20px; height: 20px}
+	.checkbox + .checkbox, .radio + .radio {margin-left: 12px}
+	.checkbox2 label, .radio2 label {width: 20px; height: 20px}
+	.date_wrap .ui-datepicker-trigger {top: 50%; right: 15px; width: 20px; height: 20px; margin-top: -10px}
+	.date_wrap .ui-datepicker-trigger img {width: 20px; height: 20px}
+	.date_wrap + .date_wrap {margin-left: 27px}
+	.date_wrap + .date_wrap:before {left: -17px; top: 8px}
+	.radio label:before {background-image: url(../images/common/radio.png)}
+	.radio input[type=radio]:checked + label:before {background-image: url(../images/common/radio_on.png)}
+	.radio2 label {background-image: url(../images/common/radio.png)}
+	.radio2 input[type=radio]:checked + label {background-image: url(../images/common/radio_on.png)}
+	.textarea {height: 90px}
+
+	/* button */
+	.btn_wrap {margin-top: 30px}
+	.btn_normal {height: 46px; padding: 0 36px; line-height: 46px}
+	.btn_normal + .btn_normal {margin-left: 7px}
+	.btn_s_normal {height: 40px; padding: 0 15px; line-height: 40px}
+	.btn_next_step {padding-left: 36px; padding-right: 68px; background-image: url(../images/common/icon_next.png); background-position: calc(100% - 38px) 50%; background-size: auto}
+	.btn_prev_step {padding-right: 36px; padding-left: 68px; background-image: url(../images/common/icon_prev.png); background-size: auto; background-position: 34px 50%}
+	.btn_cancel {position: absolute; top: 0; right: 0}
+	.btn_wrap.btn3 {width: auto; margin-left: 0; margin-right: 0}
+	.btn_wrap.btn3 .btn_cancel {float: none; margin-top: 0}
+
+	/* table */
+	.normal_table {table-layout: fixed}
+	.normal_table colgroup {display: table-column-group}
+	.normal_table th, .normal_table td {padding: 16px 10px; white-space: normal}
+	.normal_table th {font-size: 15px}
+	.normal_table td.tit {padding: 16px 0 16px 20px}
+
+
+	/* paging */
+	.paging {margin-top: 30px}
+	.paging a {width: 33px; height: 33px; margin-right: 5px; font-size: 14px; line-height: 32px}
+	.paging .btn_first {background-image: url(../images/common/paging01.gif)}
+	.paging .btn_prev {margin-right: 20px; background-image: url(../images/common/paging02.gif)}
+	.paging .btn_next {margin-left: 15px; background-image: url(../images/common/paging03.gif)}
+	.paging .btn_last {background-image: url(../images/common/paging04.gif)}
+	.btn_wrap + .paging {margin-top: -46px}
+
+
 }
-
-input[type="checkbox"] + label {
-    color:#666;
-}
-
-input[type="checkbox"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:8px 5px 10px 10px;
-    vertical-align:middle;
-    background:url(../images/check.png) left top no-repeat;
-    cursor:pointer;
-}
-
-input[type="checkbox"]:checked + label span {
-    background:url(../images/check.png) -19px top no-repeat;
-}
-
-input[type="radio"] {
-    display:none;
-}
-
-input[type="radio"] + label {
-    color:#666;
-}
-
-input[type="radio"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:8px 5px 10px 10px;
-    vertical-align:middle;
-    background:url(../images/check.png) -38px top no-repeat;
-    cursor:pointer;
-}
-
-input[type="radio"]:checked + label span {
-    background:url(../images/check.png) -57px top no-repeat;
-}
-
-
-
-
-.arc > input[type="radio"] {
-    display:none;
-}
-
-.arc > input[type="radio"] + label A{
-	width:100px; 
-    color:#666;
-	padding:5px;
-	position:relative;
-	top:5px;
-	margin:0px 5px 5px 5px;
-    cursor:pointer;
-	font-size:12px;
-	text-align:center;
-	background:#fff;
-	border:1px solid #bbb;
-}
-
-
-.arc > input[type="radio"]:checked + label A{
-	height:30px;
-	background-color: #006699; 
-	color:#FFF
-}
-
-
-/*button*/
-.btngroup { padding:20px 0 0 0; width:95%;margin:0px auto;}
-.btngroup2 {margin: 40px auto; width:90%; }
-.btn1 { height: 34px; line-height:34px; color:#fff; padding: 0 25px; margin:0 3px; text-align: center; border-radius: 5px;}
-.btn2 { height: 22px; line-height:22px; color:#fff; padding: 0 25px; margin:0 3px; text-align: center; border-radius: 3px;}
-
-/*margin*/
-.mb0 { margin-bottom: 0 !important}
-.mb5 { margin-bottom: 5px !important}
-.mb10 { margin-bottom: 10px !important}
-.mb15 { margin-bottom: 15px !important}
-.mb20 { margin-bottom: 20px !important}
-.mb25 { margin-bottom: 25px !important}
-.mb30 { margin-bottom: 30px !important}
-.mb35 { margin-bottom: 35px !important}
-.mb40 { margin-bottom: 40px !important}
-.mb45 { margin-bottom: 45px !important}
-.mb50 { margin-bottom: 50px !important}
-
-.ml0 { margin-left: 0 !important}
-.ml5 { margin-left: 5px !important}
-.ml10 { margin-left: 10px !important}
-.ml15 { margin-left: 15px !important}
-.ml20 { margin-left: 20px !important}
-.ml25 { margin-left: 25px !important}
-.ml30 { margin-left: 30px !important}
-.ml35 { margin-left: 35px !important}
-.ml40 { margin-left: 40px !important}
-.ml45 { margin-left: 45px !important}
-.ml50 { margin-left: 50px !important}
-
-.mt0 {margin-top:0 !important}
-.mt5 {margin-top:5px !important}
-.mt10 {margin-top:10px !important}
-.mt15 {margin-top:15px !important}
-.mt20 {margin-top:20px !important}
-.mt25 {margin-top:25px !important}
-.mt30 {margin-top:30px !important}
-.mt35 {margin-top:35px !important}
-.mt40 {margin-top:40px !important}
-.mt45 {margin-top:45px !important}
-.mt50 {margin-top:50px !important}
-
-
-.mr0 {margin-right:0 !important}
-.mr5 {margin-right:5px !important}
-.mr10 {margin-right:10px !important}
-.mr15 {margin-right:15px !important}
-.mr20 {margin-right:20px !important}
-.mr25 {margin-right:25px !important}
-.mr30 {margin-right:30px !important}
-.mr35 {margin-right:35px !important}
-.mr40 {margin-right:40px !important}
-.mr45 {margin-right:45px !important}
-.mr50 {margin-right:50px !important}
-
-
-
-.p5 {padding:5px !important}
-.p10 {padding:10px !important}
-.p15 {padding:15px !important}
-.p20 {padding:20px !important}
-.p25 {padding:25px !important}
-.p30 {padding:30px !important}
-.p35 {padding:25px !important}
-.p40 {padding:40px !important}
-.p45 {padding:45px !important}
-.p50 {padding:50px !important}
-
-.pl5 {padding-left:5px !important;}
-.pl10 {padding-left:10px !important;}
-.pl15 {padding-left:15px !important;}
-.pl20 {padding-left:20px !important;}
-.pl25 {padding-left:25px !important;}
-.pl30 {padding-left:30px !important;}
-.pl35 {padding-left:35px !important;}
-.pl40 {padding-left:40px !important;}
-.pl45 {padding-left:45px !important;}
-.pl50 {padding-left:50px !important;}
-
-.pr5 {padding-right:5px !important;}
-.pr10 {padding-right:10px !important;}
-.pr15 {padding-right:15px !important;}
-.pr20 {padding-right:20px !important;}
-.pr25 {padding-right:25px !important;}
-.pr30 {padding-right:30px !important;}
-.pr35 {padding-right:35px !important;}
-.pr40 {padding-right:40px !important;}
-.pr45 {padding-right:45px !important;}
-.pr50 {padding-right:50px !important;}
-
-.pt5 {padding-top:5px !important;}
-.pt10 {padding-top:10px !important;}
-.pt15 {padding-top:15px !important;}
-.pt20 {padding-top:20px !important;}
-.pt25 {padding-top:25px !important;}
-.pt30 {padding-top:30px !important;}
-.pt35 {padding-top:35px !important;}
-.pt40 {padding-top:40px !important;}
-.pt45 {padding-top:45px !important;}
-.pt50 {padding-top:50px !important;}
-
-
-.pb0 {padding-bottom:0 !important;}
-.pb5 {padding-bottom:5px !important;}
-.pb10 {padding-bottom:10px !important;}
-.pb15 {padding-bottom:15px !important;}
-.pb20 {padding-bottom:20px !important;}
-.pb25 {padding-bottom:25px !important;}
-.pb30 {padding-bottom:30px !important;}
-.pb35 {padding-bottom:35px !important;}
-.pb40 {padding-bottom:40px !important;}
-.pb45 {padding-bottom:45px !important;}
-.pb50 {padding-bottom:50px !important;}
-
