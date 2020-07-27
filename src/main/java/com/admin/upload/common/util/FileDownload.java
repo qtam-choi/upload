@@ -14,10 +14,14 @@ import java.io.PrintWriter;
 import java.net.URLEncoder;
 import java.util.Map;
 
+@Component
 public class FileDownload extends AbstractView {
 
+	private static String saveDir;
 	@Value("${file.savedir}")
-	private String saveDir;
+	public void setSaveDir(String str){
+		saveDir = str;
+	}
 
 
 	public FileDownload() {

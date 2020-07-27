@@ -8,14 +8,18 @@ import java.util.Map;
 
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 
+@Component
 public class FileUpload
 {
-
+	private static String saveDir;
 	@Value("${file.savedir}")
-	private String saveDir;
+	public void setSaveDir(String str){
+		saveDir = str;
+	}
 
 	private String file_kind;
 	private String file_name_org;
@@ -25,7 +29,7 @@ public class FileUpload
 	private String file_path;
 	private String result;
 	private String msg;
-	
+
 	public FileUpload() {
 		file_kind = "";
 		file_name_org ="";
@@ -36,7 +40,7 @@ public class FileUpload
 		result = "S";
 		msg = "";
 	}
-	
+
 	public FileUpload( MultipartFile uploadFile, String client, String uploadDir, String fileName ) {
 
 

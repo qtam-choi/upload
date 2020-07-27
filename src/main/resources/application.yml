@@ -81,4 +81,4 @@ server:
 #          기타 설정
 ###################################################
 file :
-  savedir : D:\springboot\upload\upload
+  savedir : /home/webapp/ktupload/upload

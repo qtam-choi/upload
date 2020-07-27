@@ -24,7 +24,6 @@ import java.util.Map;
 @Controller
 public class CommonController {
 
-
 	@Autowired
 	CommonActionImpl commonActionImpl;
 
@@ -79,40 +78,35 @@ public class CommonController {
 		String client = "doc";
 		String uploadDir =  DateUtil.getToday("yyyyMM");
 
-		//file1 있을경우
-		if(files1 != null){
 
-			String originalFileName = files1.getOriginalFilename();
-			String onlyFileName = originalFileName.substring(0, originalFileName.indexOf("."));
-			String extension = originalFileName.substring(originalFileName.indexOf(".")+1);
+		String originalFileName = files1.getOriginalFilename();
+		String onlyFileName = originalFileName.substring(0, originalFileName.indexOf("."));
+		String extension = originalFileName.substring(originalFileName.indexOf(".")+1);
 
-			FileUpload fileUpload = new FileUpload(request.getFile("files1"), client, uploadDir, client + CommonUtil.crefileName() + "1."+extension);
+		FileUpload fileUpload = new FileUpload(request.getFile("files1"), client, uploadDir, client + CommonUtil.crefileName() + "1."+extension);
 
-			Map fileMap = fileUpload.getFileInfo();
+		Map fileMap = fileUpload.getFileInfo();
 
-			fileMap.put("action", "FILE_UPLOAD");
-			fileMap.put("file_seq", 1);
+		fileMap.put("action", "FILE_UPLOAD");
+		fileMap.put("file_seq", 1);
 
 
-			Map resultMap = (Map)commonActionImpl.serviceCall(fileMap);
+		Map resultMap = (Map)commonActionImpl.serviceCall(fileMap);
 
-			if(resultMap.get("RETURN_CODE").equals("E")){
-				modelAndView.addAllObjects(resultMap);
-				return modelAndView;
+		if(resultMap.get("RETURN_CODE").equals("E")){
+			modelAndView.addAllObjects(resultMap);
+			return modelAndView;
 
-			}else{
-
-				paramMap.put("file_no", resultMap.get("file_no"));
-
-			}
-
+		}else{
+			paramMap.put("file_no", resultMap.get("file_no"));
+			paramMap.put("file_name", resultMap.get("file_name"));
 		}
 
 		/*파일 첨부 ENDED */
 
 		paramMap.put("clientIp", request.getRemoteAddr());
 
-		Map resultMap = (Map)commonActionImpl.serviceCall(paramMap);
+		resultMap = (Map)commonActionImpl.serviceCall(paramMap);
 
 		modelAndView.addAllObjects(resultMap);
 
@@ -122,7 +116,6 @@ public class CommonController {
 	//공통메뉴
 	@RequestMapping("/{menu1}/{menu2}.do")
 	public String page(@PathVariable String menu1, @PathVariable String menu2){
-		System.out.println("url : "+ menu1+ "/"+ menu2);
 		return menu1 + "/" + menu2;
 	}
 
