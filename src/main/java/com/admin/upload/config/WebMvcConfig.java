@@ -28,7 +28,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(commonInterceptor())
                 .addPathPatterns("/**") // 적용할 url
                 .excludePathPatterns("/loginAction") // 제외할 url
-                .excludePathPatterns("/css/**", "/images/**", "/js/**", "/error/**"); // 제외할 url
+                .excludePathPatterns("/css/**", "/images/**", "/js/**", "/error/**", "/fonts/**"); // 제외할 url
 
         WebMvcConfigurer.super.addInterceptors(registry);
     }

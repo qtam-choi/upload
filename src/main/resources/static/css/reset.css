@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/NotoSans-Light.woff2) format('woff2'),
+       url(../fonts/NotoSans-Light.woff2) format('woff')
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+  src: url(../fonts/NotoSans-Regular.woff2) format('woff2'),
+       url(../fonts/NotoSans-Regular.woff) format('woff')
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+  src: url(../fonts/NotoSans-Medium.woff2) format('woff2'),
+       url(../fonts/NotoSans-Medium.woff2) format('woff')
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 700;
+  src: url(../fonts/NotoSans-Bold.woff2) format('woff2'),
+       url(../fonts/NotoSans-Bold.woff) format('woff')
+}
+
+* {margin:0; padding:0}
+html, body {height: 100%}
+body {overflow-x: hidden; font-family: 'Noto Sans KR',dotum,'돋움',arial, sans-serif; font-size: 13px; font-weight: 300; color: #666; line-height: 1.53; -webkit-text-size-adjust: none; word-break: keep-all; word-wrap: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; -webkit-overflow-scrolling:touch;}
+ol, ul, li ,dl, dt, dd {list-style: none outside none}
+hr {display: none}
+fieldset, img, table, caption, tbody, tfoot, thead, tr, th, td, button, hr {border: 0}
+address, caption, cite, code, dfn, em, strong, th, var {font-style: normal}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none}
+table {width: 100%; border-collapse: separate; border-spacing: 0; table-layout: fixed}
+caption {position:absolute; left:-10000px; top: auto; width: 1px; height: 1px; overflow: hidden}
+legend  {position:absolute; left: 0; top: 0; width:0 ;height: 0; overflow: hidden; visibility: hidden; font-size: 0; line-height: 0}
+img {vertical-align: top; max-width: 100%}
+a {text-decoration: none; color: #666}
+select, input, textarea, button {font-family: 'Noto Sans KR',dotum,'돋움',arial,sans-serif; color: #666; font-weight: 300}
+select, input[type="text"], input[type="password"], textarea {border-radius: 0; box-sizing: border-box; border: 1px solid #d9d9d9; background-color: #fff}
+select {padding: 0 0 0 10px}
+button {border-radius: 0; margin: 0; overflow: visible; text-transform: none; -webkit-appearance: button; cursor: pointer; border: 0; background: none}
+input::-ms-clear {display: none}
+select::-ms-expand {display: none}
+select {-webkit-appearance:none; -moz-appearance:none; appearance:none}
+textarea {padding: 10px; resize: none}
+label {cursor: pointer}
+::-webkit-input-placeholder {color: #999 !important}
+:-moz-placeholder {color: #999 !important}
+::-moz-placeholder {color: #999 !important}
+:-ms-input-placeholder {color: #999 !important}
+.mobile caption {position: static; left: auto; width: auto; height: auto; overflow: visible; display: none}

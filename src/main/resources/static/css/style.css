@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+.content {margin: 0 15px 30px; padding: 0 10px 25px; background: #fff; border: 1px solid #d9d9d9; box-sizing: border-box}
+.content.full {margin: 0 0 30px}
+.login_box:after {content: ''; display: block; clear: both}
+.login_box + .login_box {margin-top: 14px}
+.login_box + .btn_login {margin-top: 17px}
+.login_box input[type=text], .login_box input[type=password], .login_box input[type=file], .login_box select {height: 35px}
+.login_tit {display: inline-block; margin-bottom: 7px; font-weight: 500; color: #333}
+span.login_tit {display: block}
+.btn_login {display: block; width: 100%; height: 40px; font-weight: 500; color: #fff; background: #d71921; line-height: 39px}
+.login_content {margin-top: 15px}
+.login_content .bottom {font-size: 12px; text-align: center}
+.login_content .form_wrap {margin: 0 0 11px}
+.login_content .utill {margin: 12px 0 20px}
+.login_content .utill02 {margin-top: 12px; text-align: right}
+.login_content .utill02 a {display: inline-block}
+.login_content .utill02 a + a {position: relative; margin-left: 10px; padding-left: 10px}
+.login_content .utill02 a + a:before {content: ''; position: absolute; top: 50%; left: 0; width: 1px; height: 12px; margin-top: -6px; background: #d9d9d9}
+.login_content .type {margin-top: 18px; padding-top: 18px; border-top: 1px dashed #d9d9d9}
+.login_content .type > a {margin-top: 10px}
+.login_content .type .sns:after {content: ''; display: block; clear: both}
+.login_content .type .sns a {float: left; width: calc(50% - 3px)}
+.login_content .type .sns a + a {margin-left: 6px}
+.login_content .type a {display: block; height: 31px; font-size: 12px; color: #fff; line-height: 31px; background-repeat: no-repeat}
+.login_content .type span {display: block; margin-left: 31px; border-left: 1px solid rgba(255,255,255,0.35); text-align: center}
+
+.login_content .type .login_certify {background-color: #2d4059; background-image: url(../images/icon_certify_m.png); background-size: 13px; background-position: 9px 50%}
+.login_content .type .login_none {background-color: #999; background-image: url(../images/icon_none_m.png); background-size: 13px; background-position: 9px 50%}
+
+
+@media screen and (min-width: 1280px){
+	.m_content {display: none}
+	.pc_content {display: block}
+	.content {width: 1280px; margin: 0 auto 50px; padding: 0 0 80px 0}
+	.content.full {padding: 0 80px 50px; margin: 0 auto 80px}
+	.login_box + .login_box {margin-top: 17px}
+	.login_box .form_call {max-width: none}
+	.login_tit {margin-bottom: 12px; font-size: 16px}
+	.btn_login {height: 52px; font-size: 17px; font-weight: 500; line-height: 51px}
+	.login_content {width: 640px; margin: 0 auto; padding: 0 80px 50px}
+	.login_content .bottom {font-size: 15px}
+	.login_content .form_wrap {margin: 0 0 15px}
+	.login_box input[type=text], .login_box input[type=password], .login_box select {height: 46px}
+	.login_content .utill {margin: 20px 0 30px}
+	.login_content .utill02 {margin-top: 20px}
+ 	.login_content .utill02 a + a {margin-left: 15px; padding-left: 15px}
+	.login_content .utill02 a + a:before {height: 14px; margin-top: -7px}
+	.login_content .type {margin-top: 30px; padding-top: 30px}
+	.login_content .type .sns a {width: calc(50% - 5px)}
+	.login_content .type .sns a + a {margin-left: 10px}
+	.login_content .type a {height: 40px; font-size: 14px; line-height: 40px}
+	.login_content .type span {margin-left: 40px}
+
+	.login_content .type .login_certify {background-image: url(../images/icon_certify.gif); background-size: auto; background-position: 12px 50%}
+	.login_content .type .login_none {background-image: url(../images/icon_none.gif); background-size: auto; background-position: 12px 50%}
+		.btn_normal{font-size:16px}
+
+}

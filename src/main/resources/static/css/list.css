@@ -1,0 +1,44 @@
+		
+.paging {margin-top: 20px; font-size: 0; text-align: center}
+.paging a, .paging strong {display: inline-block; width: 27px; height: 27px; margin-right: 5px; font-size: 13px; color: #666; line-height: 26px; border: 1px solid #ccc; vertical-align: top; box-sizing: border-box; background-size: 26px}
+.paging a:last-child {margin-right: 0}
+.paging strong {font-weight: 500; color: #fff; background: #a10f14; border-color: #a10f14; text-decoration: underline}
+
+.normal_table {border-top: 2px solid #333; text-align: center}
+.normal_table th {padding: 9px 0; font-weight: 700; font-size: 15px; color: #333; background: #f8f8f8; border-bottom: 1px solid #333; border-right: 1px solid #dee3eb}
+.normal_table th:last-child, .normal_table td:last-child {border-right: 0}
+.normal_table td {position: relative; padding: 8px 5px; border-bottom: 1px solid #dee3eb; text-align: center}
+.normal_table tbody tr:last-child td {border-bottom-color: #333}
+.normal_table .m_hidden {display: none}
+.normal_table .auto {width: auto}
+table .type3 {width: 90px}
+table .type5 {width: 65px}
+.btn_search {width: 58px; height: 30px; margin-left: 9px; font-size: 14px; font-weight: 500; color: #fff; background: #666; border: 1px solid #444; line-height: 30px;}
+
+
+@media screen and (min-width: 1280px){
+	
+	.slist { margin-bottom:-50px;}
+	
+	.normal_table col.m_hidden {display: table-column}
+	.normal_table th.m_hidden, .normal_table td.m_hidden {display: table-cell}
+	.normal_table thead {display: table-header-group}
+	.normal_table th {padding: 11px 0; font-weight: 700; font-size: 18px}
+	.normal_table td {display: table-cell; padding: 14px 5px; font-size: 15px; border-bottom: 1px solid #dee3eb; border-right: 1px solid #dee3eb; text-align: center}
+	.normal_table .txt_left {padding-left: 13px !important}
+	.normal_table.m_table td {display: table-cell; padding: 14px 5px; border-right: 1px solid #dee3eb; min-height: auto; text-align: center}
+	.normal_table.m_table td:last-child {border-right: 0}
+	.normal_table.m_table colgroup {display: table-column-group}
+	.normal_table .m_tit {display: none}
+	table .type1 {width: 76px}
+	table .type2 {width: 95px}
+	table .type3 {width: 100px}
+	table .type4 {width: 90px}
+	table .type5 {width: 100px}
+	
+	/* paging */
+	.paging {margin-top: 30px}
+	.paging strong, .paging a {width: 34px; height: 34px; margin-right: 6px; font-size: 15px; line-height: 33px; background-size: 32px}
+
+	
+}
