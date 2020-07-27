@@ -69,7 +69,7 @@
 			,apply_date
 			,apply_id
 		) VALUES (
-			, null
+			  null
 			, #{doc_title}
 			, #{file_no}
 			, now()

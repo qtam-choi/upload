@@ -55,7 +55,7 @@ public class CommonActionImpl extends AbstractHpService
 
 			sqlSession.insert("ADMIN_COMMON.insDocUpload", dataMap);
 
-			String dnUrl = "/common/fileDownload.do?no=" + dataMap.get("file_no") + "file_name=" + dataMap.get("file_name");
+			String dnUrl = "/common/fileDownload.do?no=" + dataMap.get("file_no") + "&filename=" + dataMap.get("file_name");
 
 			result.setResultObject("dnUrl", dnUrl);
 

@@ -68,6 +68,7 @@
                 }else{
                     alert('파일이 업로드 되었습니다.');
                     $("._up_end").show();
+                    $("._upload_btn").attr("onclick", "#");
                     $("._download").attr("href", data.dnUrl);
                 }
             }
@@ -113,11 +114,11 @@
                         <div class="input_wrap"><input type="file" id="file_no"  name="file_no" ></div>
                     </div>
 
-                    <button type="button" class="btn_login" onclick="goAction('DOC_UPLOAD')">파일 업로드</button>
+                    <button type="button" class="btn_login _upload_btn" onclick="goAction('DOC_UPLOAD')">파일 업로드</button>
 
                     <div class="type _up_end" style="display:none;">
                         <div class="sns">
-                            <a href="" class="login_certify" class="_download"><span>다운로드</span></a>
+                            <a href="" class="login_certify _download"><span>다운로드</span></a>
                             <a href="javascript:location.reload();" class="login_none btn_pop" ><span>다시 업로드</span></a>
                         </div>
                     </div>
