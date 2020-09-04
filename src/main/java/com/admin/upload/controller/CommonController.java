@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -112,6 +113,39 @@ public class CommonController {
 
 		return modelAndView;
 	}
+
+
+
+	@RequestMapping("/common/commonAction.do")
+	public ModelAndView comPubAction(HttpServletRequest request,
+									 ModelMap model, HttpServletResponse response) throws IOException {
+
+		ModelAndView modelAndView = new ModelAndView("jsonView");
+
+		Map paramMap = new HashMap();
+
+		Enumeration req = request.getParameterNames();
+
+		while(req.hasMoreElements()){
+			String key = req.nextElement().toString();
+			String value = request.getParameter(key);
+
+			paramMap.put(key, value);
+		}
+
+		HttpSession session = request.getSession();
+		paramMap.put("session", session);
+		paramMap.put("clientIp", request.getRemoteAddr());
+		paramMap.put("host" , request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort());
+
+		Map resultMap = (Map)commonActionImpl.serviceCall(paramMap);
+
+		modelAndView.addAllObjects(resultMap);
+
+		return modelAndView;
+	}
+
+
 
 	//공통메뉴
 	@RequestMapping("/{menu1}/{menu2}.do")

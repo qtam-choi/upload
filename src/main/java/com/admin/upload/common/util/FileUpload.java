@@ -47,6 +47,8 @@ public class FileUpload
 		String saveDirPath = File.separator + client +File.separator +uploadDir + File.separator ;
 		String fullDirPath = saveDir + saveDirPath;
 
+		System.out.println("fullDirPath : " + fullDirPath);
+
 		String originalFileName = "";
 
 		if(!uploadFile.isEmpty()){

@@ -2,6 +2,8 @@ package com.admin.upload.common.util;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -24,13 +26,36 @@ import java.security.NoSuchAlgorithmException;
  *  
  * Copyright (C) by SMC All right reserved.
  */
+
+@Component
 public class CommonUtil {
+
+    private static String siteCode;
+    @Value("${nice-priv-auth.siteCode}")
+    public void setSiteCode(String str){
+        siteCode = str;
+    }
+
+    private static String sitePass;
+    @Value("${nice-priv-auth.sitePass}")
+    public void setSitePass(String str){
+        sitePass = str;
+    }
+
+    private static String reqNumber;
+    @Value("${nice-priv-auth.reqNumber}")
+    public void setReqNumber(String str){
+        reqNumber = str;
+    }
 	
 	
     private static SqlSessionTemplate sqlSession;
 	
 	@Autowired
     protected static SqlSessionTemplate sql;
+
+
+
 	
 	
 	/**************************************
@@ -63,6 +88,27 @@ public class CommonUtil {
 	public static String removeTag(String html) throws Exception {
 		return html.replaceAll("<(/)?([a-zA-Z]*)(\\s[a-zA-Z]*=[^>]*)?(\\s)*(/)?>", "");
 	}
+
+
+    /**************************************
+     * 설정파일 변수 가져오기
+     ****************************************/
+    public static String getProperty(String gubun) throws Exception {
+
+        String retValue = "";
+
+        if(gubun.equals("siteCode")){
+            retValue = siteCode;
+        }else if(gubun.equals("sitePass")){
+            retValue = sitePass;
+        }else if(gubun.equals("reqNumber")){
+            retValue = reqNumber;
+        }
+
+        System.out.println("retValue : " + retValue);
+
+        return retValue;
+    }
 
 
     /************************************************************

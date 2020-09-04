@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/common.css?v=0.2'/>">
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/style.css?v=0.2'/>">
 
-    <script src="<c:url value='/js/jquery-1.12.4.min.js'/>"></script>
+    <script src="<c:url value='/js/jquery-2.1.4.min.js'/>"></script>
     <script src="<c:url value='/js/jquery-ui.js'/>"></script>
     <script src="<c:url value='/js/jquery.blockUI.js'/>"></script>
     <script src="<c:url value='/js/commonUtil.js'/>"></script>
